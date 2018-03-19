@@ -13,6 +13,7 @@
 		B3754B58204BD9F6002F0CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3754B56204BD9F6002F0CB4 /* Main.storyboard */; };
 		B3754B5A204BD9F6002F0CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3754B59204BD9F6002F0CB4 /* Assets.xcassets */; };
 		B3754B5D204BD9F6002F0CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3754B5B204BD9F6002F0CB4 /* LaunchScreen.storyboard */; };
+		B3F44C00205FB87200D41E07 /* ConverterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F44BFF205FB87200D41E07 /* ConverterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B3754B59204BD9F6002F0CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3754B5C204BD9F6002F0CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3754B5E204BD9F6002F0CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F44BFF205FB87200D41E07 /* ConverterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B3754B59204BD9F6002F0CB4 /* Assets.xcassets */,
 				B3754B5B204BD9F6002F0CB4 /* LaunchScreen.storyboard */,
 				B3754B5E204BD9F6002F0CB4 /* Info.plist */,
+				B3F44BFF205FB87200D41E07 /* ConverterModel.swift */,
 			);
 			path = iconverter;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F44C00205FB87200D41E07 /* ConverterModel.swift in Sources */,
 				B3754B55204BD9F6002F0CB4 /* SecondViewController.swift in Sources */,
 				B3754B51204BD9F6002F0CB4 /* AppDelegate.swift in Sources */,
 				B3754B53204BD9F6002F0CB4 /* FirstViewController.swift in Sources */,

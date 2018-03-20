@@ -20,8 +20,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                               name: .UIKeyboardWillShow, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         testTextField.becomeFirstResponder()
     }
     
@@ -31,13 +32,11 @@ class FirstViewController: UIViewController {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        //this moves the tab bar above the keyboard for all devices
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as?
             NSValue)?.cgRectValue {
             self.keyBoardHeight = keyboardSize.origin.y - keyboardSize.height -
                 (self.tabBarController?.tabBar.frame.height)!
         }
-//        tabBarMoved = true
         var tabBarFrame: CGRect = (self.tabBarController?.tabBar.frame)!
         tabBarFrame.origin.y = self.keyBoardHeight
         UIView.animate(withDuration: 0.25, animations: {() -> Void in

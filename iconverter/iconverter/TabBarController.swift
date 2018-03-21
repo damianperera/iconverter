@@ -1,0 +1,49 @@
+//
+//  TabBarController.swift
+//  iconverter
+//
+//  Created by Damian Perera on 3/21/18.
+//  Copyright © 2018 Damian Perera. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class TabBarController: UITabBarController {
+    func initializeTabs(){
+        var allowedControllers = [UIViewController]()
+        if let controllers = customizableViewControllers{
+            for controller in controllers{
+                print("\(controller)")
+                if !(controller is FirstViewController){
+                    allowedControllers.append(controller)
+                }
+            }
+        }
+        customizableViewControllers = allowedControllers
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeTabs()
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let selectedItem = tabBar.items?.index(of: item)
+        print("Selected Tab Item: ", selectedItem!)
+        if selectedItem! == 4 {
+            var tabBarFrame: CGRect = CGRect(x: self.view.frame.minX, y: self.view.frame.maxY, width:
+                self.view.frame.width, height: 30.0)
+            tabBarFrame.origin.y = self.view.frame.maxY
+            self.tabBar.frame = tabBarFrame
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if viewController is FirstViewController {
+            print("First tab")
+        } else if viewController is SecondViewController {
+            print("Second tab")
+        }
+    }
+}

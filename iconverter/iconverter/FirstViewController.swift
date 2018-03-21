@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     var keyBoardHeight:CGFloat = 0
     var isKeyboardActive = false
     var tabBarOGHeight:CGFloat = 0
-    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,7 +46,6 @@ class FirstViewController: UIViewController {
             NSValue)?.cgRectValue {
             self.keyBoardHeight = keyboardSize.origin.y - keyboardSize.height -
                 (self.tabBarController?.tabBar.frame.height)!
-            print("Keyboard Origin: ", keyboardSize.origin.y, " | Keyboard Height: ", keyboardSize.height)
         }
         var tabBarFrame: CGRect = (self.tabBarController?.tabBar.frame)!
         tabBarFrame.origin.y = self.keyBoardHeight

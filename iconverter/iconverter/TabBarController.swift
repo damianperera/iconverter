@@ -30,7 +30,6 @@ class TabBarController: UITabBarController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         let selectedItem = tabBar.items?.index(of: item)
-        print("Selected Tab Item: ", selectedItem!)
         if selectedItem! == 4 {
             var tabBarFrame: CGRect = CGRect(x: self.view.frame.minX, y: self.view.frame.maxY, width:
                 self.view.frame.width, height: 30.0)
@@ -39,11 +38,4 @@ class TabBarController: UITabBarController {
         }
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        if viewController is FirstViewController {
-            print("First tab")
-        } else if viewController is SecondViewController {
-            print("Second tab")
-        }
-    }
 }

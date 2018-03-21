@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
         var allowedControllers = [UIViewController]()
         if let controllers = customizableViewControllers{
             for controller in controllers{
-                print("\(controller)")
                 if !(controller is FirstViewController){
                     allowedControllers.append(controller)
                 }

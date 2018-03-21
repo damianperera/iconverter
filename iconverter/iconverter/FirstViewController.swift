@@ -10,7 +10,11 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var testTextField: UITextField!
+    @IBOutlet weak var txtStonePounds: UITextField!
+    @IBOutlet weak var txtPounds: UITextField!
+    @IBOutlet weak var txtOunces: UITextField!
+    @IBOutlet weak var txtGrams: UITextField!
+    @IBOutlet weak var txtKilograms: UITextField!
     var keyBoardHeight:CGFloat = 0
     var isKeyboardActive = false
     var tabBarOGHeight:CGFloat = 0
@@ -21,7 +25,7 @@ class FirstViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        testTextField.becomeFirstResponder()
+        txtKilograms.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {

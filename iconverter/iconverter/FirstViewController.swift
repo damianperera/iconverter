@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     var keyBoardHeight:CGFloat = 0
     var isKeyboardActive = false
     var tabBarOGHeight:CGFloat = 0
-    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

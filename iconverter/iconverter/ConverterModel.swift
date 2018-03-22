@@ -96,7 +96,7 @@ class ConverterModel {
         case .st:
             values[.kg] = val * 6.35029
             values[.g] = val * 6350.29
-            values[.oz] = val * 224
+            values[.oz] = val * 224
             values[.lbs] = val * 14
             values[.st_lbs] = val
         case .st_lbs:

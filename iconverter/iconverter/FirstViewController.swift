@@ -10,6 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var txtSones: UITextField!
     @IBOutlet weak var txtStonePounds: UITextField!
     @IBOutlet weak var txtPounds: UITextField!
     @IBOutlet weak var txtOunces: UITextField!
@@ -35,10 +36,6 @@ class FirstViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-
     }
     
     func dismissFirstResponders() {

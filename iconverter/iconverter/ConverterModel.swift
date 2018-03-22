@@ -9,7 +9,7 @@
 import Foundation
 
 enum Unit {
-    case kg, g, oz, lbs, st, C, F, K, cm, m, ih, mm, yd, gal, l, pt, fl_oz, m3, cm3, l3, m_s, km_h, ml_h
+    case kg, g, oz, lbs, st, st_lbs, C, F, K, cm, m, ih, mm, yd, gal, l, pt, fl_oz, m3, cm3, l3, m_s, km_h, ml_h
 }
 
 class ConverterModel {
@@ -19,7 +19,8 @@ class ConverterModel {
         .g: "grams",
         .oz: "ounces",
         .lbs: "pounds",
-        .st: "stone pounds",
+        .st: "stone",
+        .st_lbs: "stone pounds",
         .C: "Celcius",
         .F: "Fahrenheit",
         .K: "Kelvin",
@@ -73,26 +74,37 @@ class ConverterModel {
             values[.oz] = val * 35.274
             values[.lbs] = val * 2.20462
             values[.st] = val * 0.157473
+            values[.st_lbs] = val
         case .g:
             values[.kg] = val * 0.001
             values[.oz] = val * 0.035274
             values[.lbs] = val * 0.00220462
             values[.st] = val * 0.000157473
+            values[.st_lbs] = val
         case .oz:
             values[.kg] = val * 0.0283495
             values[.g] = val * 28.3495
             values[.lbs] = val * 0.0625
             values[.st] = val * 0.00446429
+            values[.st_lbs] = val
         case .lbs:
             values[.kg] = val * 0.453592
             values[.g] = val * 453.592
             values[.oz] = val * 16
             values[.st] = val * 0.0714286
+            values[.st_lbs] = val
         case .st:
             values[.kg] = val * 6.35029
             values[.g] = val * 6350.29
-            values[.oz] = val * 224
+            values[.oz] = val * 224
             values[.lbs] = val * 14
+            values[.st_lbs] = val
+        case .st_lbs:
+            values[.kg] = val
+            values[.g] = val
+            values[.oz] = val
+            values[.lbs] = val
+            values[.st] = val
         case .C:
             values[.F] = val * 1.8 + 32
             values[.K] = val + 273.15

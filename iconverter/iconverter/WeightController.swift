@@ -43,7 +43,7 @@ class WeightController: UIViewController, UITextFieldDelegate {
     
     func updateFields(results: Dictionary<Unit, Double>, sourceTag: Int) {
         for (unit, val) in results {
-            let result:String = val.toInt(unit: unit) != nil ? String(describing: val.toInt(unit: unit)!) : String(val)
+            let result:String = val.roundOff().toInt(unit: unit) != nil ? String(describing: val.roundOff().toInt(unit: unit)!) : String(val.roundOff())
             switch unit {
             case .kg:
                 if !(txtKilograms.tag == sourceTag) {
@@ -106,6 +106,7 @@ class WeightController: UIViewController, UITextFieldDelegate {
     /**
         UI Components
      **/
+    
     override func viewDidAppear(_ animated: Bool) {
         txtKilograms.becomeFirstResponder()
     }
@@ -159,6 +160,25 @@ class WeightController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let oldText = textField.text, let r = Range(range, in: oldText) else {
+            return true
+        }
+        
+        let newText = oldText.replacingCharacters(in: r, with: string)
+        let isNumeric = newText.isEmpty || (Double(newText) != nil)
+        let numberOfDots = newText.components(separatedBy: ".").count - 1
+        
+        let numberOfDecimalDigits: Int
+        if let dotIndex = newText.index(of: ".") {
+            numberOfDecimalDigits = newText.distance(from: dotIndex, to: newText.endIndex) - 1
+        } else {
+            numberOfDecimalDigits = 0
+        }
+        
+        return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 4
     }
 
     override func didReceiveMemoryWarning() {

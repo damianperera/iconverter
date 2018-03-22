@@ -54,14 +54,6 @@ class ConverterModel {
     
     func getUnit(name of: String) -> Unit {
         return (unitNames as NSDictionary).allKeys(for: of)[0] as! Unit
-//        var result:Unit = .kg
-//        for (val, name) in unitNames {
-//            if name == of {
-//                result = val
-//                break
-//            }
-//        }
-//        return result
     }
     
     func convert(unit from: Unit, value val: Double) -> Dictionary<Unit, Double> {

@@ -43,8 +43,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     
     func updateFields(results: Dictionary<Unit, Double>, sourceTag: Int) {
         for (unit, val) in results {
-            let result:String = (floor(val) == val || unit == .st) ? String(Int(val)) : String(val)
-            print("Source: ", sourceTag)
+            let result:String = val.toInt(unit: unit) != nil ? String(describing: val.toInt(unit: unit)!) : String(val)
             switch unit {
             case .kg:
                 if !(txtKilograms.tag == sourceTag) {

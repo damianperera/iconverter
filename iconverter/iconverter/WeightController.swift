@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  WeightController.swift
 //  iconverter
 //
 //  Created by Damian Perera on 3/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITextFieldDelegate {
+class WeightController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtStones: UITextField!
     @IBOutlet weak var txtStonePounds: UITextField!

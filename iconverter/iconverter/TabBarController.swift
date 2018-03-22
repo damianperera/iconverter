@@ -14,7 +14,7 @@ class TabBarController: UITabBarController {
         var allowedControllers = [UIViewController]()
         if let controllers = customizableViewControllers{
             for controller in controllers{
-                if !(controller is FirstViewController){
+                if !(controller is WeightController){
                     allowedControllers.append(controller)
                 }
             }

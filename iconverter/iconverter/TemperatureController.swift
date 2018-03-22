@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TemperatureController.swift
 //  iconverter
 //
 //  Created by Damian Perera on 3/4/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TemperatureController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

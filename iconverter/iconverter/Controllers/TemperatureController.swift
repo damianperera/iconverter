@@ -82,6 +82,7 @@ class TemperatureController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        didSegue = true
         if let target = segue.destination.title {
             switch target {
             case "History":

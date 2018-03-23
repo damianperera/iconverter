@@ -143,10 +143,6 @@ class WeightController: UIViewController, UITextFieldDelegate {
         return .lightContent
     }
     
-    func dismissFirstResponders() {
-        self.view.subviews.filter({$0 is UITextField}).forEach({$0.resignFirstResponder()})
-    }
-    
     @objc func keyboardWillAppear(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as?
             NSValue)?.cgRectValue {
@@ -169,22 +165,6 @@ class WeightController: UIViewController, UITextFieldDelegate {
         isKeyboardActive = false
     }
     
-    func switchTabBarTextOffset() {
-        if isKeyboardActive {
-            if let count = self.tabBarController?.tabBar.items?.count {
-                for i in 0...(count-1) {
-                    self.tabBarController?.tabBar.items?[i].titlePositionAdjustment = UIOffsetMake(0, 0)
-                }
-            }
-        } else {
-            if let count = self.tabBarController?.tabBar.items?.count {
-                for i in 0...(count-1) {
-                    self.tabBarController?.tabBar.items?[i].titlePositionAdjustment = UIOffsetMake(0, 0)
-                }
-            }
-        }
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let oldText = textField.text, let r = Range(range, in: oldText) else {
             return true
@@ -203,6 +183,8 @@ class WeightController: UIViewController, UITextFieldDelegate {
         
         return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 4 && newText.count <= 9
     }
+    
+    override var disablesAutomaticKeyboardDismissal: Bool { return true }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

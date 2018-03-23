@@ -11,8 +11,21 @@ import UIKit
 
 class ConstantsController: UIViewController {
     
+    var segueFromController:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction func cancelSegue(_ sender: UIBarButtonItem) {
+        switch segueFromController {
+        case "weight":
+            self.performSegue(withIdentifier: "segueConstantsBackToWeightController", sender: nil)
+        case "temperature":
+            self.performSegue(withIdentifier: "segueConstantsBackToTemperatureController", sender: nil)
+        default:
+            break
+        }
     }
     
 }

@@ -346,8 +346,8 @@
                         <viewLayoutGuide key="safeArea" id="gwf-CV-2sf"/>
                     </view>
                     <connections>
-                        <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueBackToWeightController" unwindAction="backToWeightControllerWithStoryboard:" id="U0c-Nq-DoV"/>
-                        <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueBackToTemperatureController" unwindAction="backToTemperatureControllerWithStoryboard:" id="K6z-iU-JBX"/>
+                        <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueHistoryBackToWeightController" unwindAction="backToWeightControllerWithStoryboard:" id="U0c-Nq-DoV"/>
+                        <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueHistoryBackToTemperatureController" unwindAction="backToTemperatureControllerWithStoryboard:" id="K6z-iU-JBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prq-Fx-vCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -372,7 +372,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Constants" id="TzU-Yp-d3J">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VR5-9I-Xh8"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="VR5-9I-Xh8">
+                                            <connections>
+                                                <action selector="cancelSegue:" destination="ORr-Hx-nNL" id="Ay7-Ub-tba"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -380,8 +384,13 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="rt4-tg-eTg"/>
                     </view>
+                    <connections>
+                        <segue destination="HUg-Qy-9UC" kind="unwind" identifier="segueConstantsBackToTemperatureController" unwindAction="backToTemperatureControllerWithStoryboard:" id="pFm-h1-mBU"/>
+                        <segue destination="HUg-Qy-9UC" kind="unwind" identifier="segueConstantsBackToWeightController" unwindAction="backToWeightControllerWithStoryboard:" id="zwj-Rh-q4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZ8-4P-Hvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HUg-Qy-9UC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="941" y="1890"/>
         </scene>

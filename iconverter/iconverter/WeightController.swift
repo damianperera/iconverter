@@ -19,6 +19,7 @@ class WeightController: UIViewController, UITextFieldDelegate {
     var keyBoardHeight:CGFloat = 0
     var isKeyboardActive = false
     var tabBarOGHeight:CGFloat = 0
+    var didSegue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,13 +105,22 @@ class WeightController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! HistoryController
-        destination.segueFromConroller = "weight"
+        didSegue = true
+        if let target = segue.destination.title {
+            switch target {
+            case "History":
+                let destination = segue.destination as! HistoryController
+                destination.segueFromController = "weight"
+            case "Constants":
+                let destination = segue.destination as! ConstantsController
+                destination.segueFromController = "weight"
+            default:
+                break
+            }
+        }
     }
 
-    @IBAction func backToWeightController(storyboard: UIStoryboardSegue){
-
-    }
+    @IBAction func backToWeightController(storyboard: UIStoryboardSegue){}
     
     /**
         UI Components
@@ -121,6 +131,10 @@ class WeightController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if didSegue {
+            txtKilograms.becomeFirstResponder()
+            didSegue = false
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)),
                                                name: .UIKeyboardWillShow, object: nil)
     }

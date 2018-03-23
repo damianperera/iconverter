@@ -21,8 +21,18 @@ class TemperatureController: UIViewController, UITabBarDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! HistoryController
-        destination.segueFromConroller = "temperature"
+        if let target = segue.destination.title {
+            switch target {
+            case "History":
+                let destination = segue.destination as! HistoryController
+                destination.segueFromController = "temperature"
+            case "Constants":
+                let destination = segue.destination as! ConstantsController
+                destination.segueFromController = "temperature"
+            default:
+                break
+            }
+        }
     }
     
     @IBAction func backToTemperatureController(storyboard: UIStoryboardSegue){

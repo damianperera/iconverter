@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class ConstantsController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}

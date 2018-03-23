@@ -50,7 +50,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-aL-Ffd">
-                                <rect key="frame" x="16" y="176" width="288" height="35"/>
+                                <rect key="frame" x="16" y="176" width="288" height="31"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -78,38 +78,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdS-Xe-Jjb">
-                                <rect key="frame" x="16" y="183" width="65" height="21"/>
+                                <rect key="frame" x="16" y="183" width="65" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amG-Y5-BVx">
-                                <rect key="frame" x="32" y="203" width="0.0" height="1"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="D8x-E4-cUG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jl-0e-ndp">
                                 <rect key="frame" x="0.0" y="24" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="Sy4-b9-2G2">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="Sy4-b9-2G2">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="Nog-33-N7t">
+                                    <barButtonItem title="Constants" id="Nog-33-N7t">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="kfg-E4-gMI"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="UrW-XC-suu">
+                                    <barButtonItem title="History" id="UrW-XC-suu">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="iek-kS-jRE"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="qhK-kA-ChP"/>
+                                    <barButtonItem title="Save" id="qhK-kA-ChP"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -123,13 +113,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stone Pounds (UK)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuO-RK-eKy">
-                                <rect key="frame" x="16" y="203" width="288" height="21"/>
+                                <rect key="frame" x="16" y="203" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-0V-yVf">
-                                <rect key="frame" x="16" y="255" width="288" height="35"/>
+                                <rect key="frame" x="16" y="251" width="288" height="35"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -139,7 +129,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YPm-qT-375">
-                                <rect key="frame" x="16" y="219" width="288" height="35"/>
+                                <rect key="frame" x="16" y="215" width="288" height="35"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -149,7 +139,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lo-qF-HiC">
-                                <rect key="frame" x="16" y="226" width="65" height="21"/>
+                                <rect key="frame" x="16" y="222" width="65" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="B7r-1R-gfN"/>
                                 </constraints>
@@ -158,7 +148,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npp-hs-20y">
-                                <rect key="frame" x="16" y="262" width="65" height="21"/>
+                                <rect key="frame" x="16" y="258" width="65" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="j2U-jS-sqi"/>
                                 </constraints>
@@ -170,7 +160,6 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WuO-RK-eKy" firstAttribute="trailing" secondItem="YPm-qT-375" secondAttribute="trailing" id="03E-Y1-j9c"/>
-                            <constraint firstItem="FdS-Xe-Jjb" firstAttribute="bottom" secondItem="amG-Y5-BVx" secondAttribute="bottom" id="0aj-cj-fLv"/>
                             <constraint firstItem="YPm-qT-375" firstAttribute="leading" secondItem="2Lo-qF-HiC" secondAttribute="leading" id="19a-Bw-WvA"/>
                             <constraint firstItem="8dS-8D-qL2" firstAttribute="top" secondItem="9Jl-0e-ndp" secondAttribute="bottom" id="2JK-Vz-OMN"/>
                             <constraint firstItem="Npp-hs-20y" firstAttribute="centerY" secondItem="kO6-0V-yVf" secondAttribute="centerY" id="2Uh-xO-Tbm"/>
@@ -188,7 +177,6 @@
                             <constraint firstItem="2Lo-qF-HiC" firstAttribute="top" secondItem="WuO-RK-eKy" secondAttribute="bottom" constant="2" id="HWw-Q3-qfs"/>
                             <constraint firstItem="vBT-Di-DCL" firstAttribute="centerY" secondItem="MgM-rO-zOg" secondAttribute="centerY" id="Ipv-kF-IGx"/>
                             <constraint firstItem="fUm-19-Tj6" firstAttribute="centerY" secondItem="hXb-wO-hZF" secondAttribute="centerY" id="KJZ-0r-SeX"/>
-                            <constraint firstItem="amG-Y5-BVx" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="16" id="MVj-hE-VxA"/>
                             <constraint firstItem="HFy-aL-Ffd" firstAttribute="top" secondItem="fUm-19-Tj6" secondAttribute="bottom" constant="8" symbolic="YES" id="O0x-Qy-7Fq"/>
                             <constraint firstItem="FdS-Xe-Jjb" firstAttribute="leading" secondItem="WuO-RK-eKy" secondAttribute="leading" id="Otm-uF-3dY"/>
                             <constraint firstItem="Npp-hs-20y" firstAttribute="top" secondItem="YPm-qT-375" secondAttribute="bottom" constant="8" symbolic="YES" id="Phj-7S-cSk"/>
@@ -212,7 +200,6 @@
                             <constraint firstItem="kO6-0V-yVf" firstAttribute="top" secondItem="YPm-qT-375" secondAttribute="bottom" constant="1" id="dDi-uh-Wiv"/>
                             <constraint firstItem="hXb-wO-hZF" firstAttribute="leading" secondItem="fUm-19-Tj6" secondAttribute="leading" id="eRe-fT-hSG"/>
                             <constraint firstItem="YPm-qT-375" firstAttribute="trailing" secondItem="kO6-0V-yVf" secondAttribute="trailing" id="gcn-cb-bCa"/>
-                            <constraint firstItem="WuO-RK-eKy" firstAttribute="top" secondItem="amG-Y5-BVx" secondAttribute="top" id="iGx-9C-GdV"/>
                             <constraint firstItem="WuO-RK-eKy" firstAttribute="leading" secondItem="2Lo-qF-HiC" secondAttribute="leading" id="kEh-fJ-H2s"/>
                             <constraint firstItem="hXb-wO-hZF" firstAttribute="trailing" secondItem="HFy-aL-Ffd" secondAttribute="trailing" id="p8O-dn-7p5"/>
                             <constraint firstItem="MgM-rO-zOg" firstAttribute="top" secondItem="8dS-8D-qL2" secondAttribute="bottom" constant="1" id="pYP-2a-9iI"/>
@@ -250,20 +237,20 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="XAK-rB-aPQ">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="XAK-rB-aPQ">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="Yy1-Gq-jRF">
+                                    <barButtonItem title="Constants" id="Yy1-Gq-jRF">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="zGA-8w-75Z"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="Mps-pf-u5y">
+                                    <barButtonItem title="History" id="Mps-pf-u5y">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="Q16-vw-yx6"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="fNO-gF-qDS"/>
+                                    <barButtonItem title="Save" id="fNO-gF-qDS"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -289,20 +276,20 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="BLF-Ui-xUu">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="BLF-Ui-xUu">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="e5u-iL-jOE">
+                                    <barButtonItem title="Constants" id="e5u-iL-jOE">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="ecf-Cb-7AY"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="dls-gB-hID">
+                                    <barButtonItem title="History" id="dls-gB-hID">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="O5y-mY-7Rr"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="X0P-9P-9FP"/>
+                                    <barButtonItem title="Save" id="X0P-9P-9FP"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -333,7 +320,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="History" id="qnU-ju-FHN">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="Xm2-43-Tng">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Xm2-43-Tng">
                                             <connections>
                                                 <action selector="cancelSegue:" destination="3k5-r3-nPQ" id="D3M-Oc-1y0"/>
                                             </connections>
@@ -431,20 +418,20 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="tMn-ON-HB8">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="tMn-ON-HB8">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="IRV-kK-zJS">
+                                    <barButtonItem title="Constants" id="IRV-kK-zJS">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="muD-PF-1F7"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="sb1-rR-Pcp">
+                                    <barButtonItem title="History" id="sb1-rR-Pcp">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="Tvi-6E-6ar"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="vPS-9E-vNW"/>
+                                    <barButtonItem title="Save" id="vPS-9E-vNW"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -470,20 +457,20 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="XcH-kA-Ddf">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="XcH-kA-Ddf">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="xZ8-4I-rJa">
+                                    <barButtonItem title="Constants" id="xZ8-4I-rJa">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="glL-Kl-2ov"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="avp-Mt-QlF">
+                                    <barButtonItem title="History" id="avp-Mt-QlF">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="MNr-hP-0WT"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="Qg4-if-UNt"/>
+                                    <barButtonItem title="Save" id="Qg4-if-UNt"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -509,20 +496,20 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="iConverter" image="convert" style="plain" id="d0D-BS-rgL">
+                                    <barButtonItem enabled="NO" image="convert" style="plain" id="d0D-BS-rgL">
                                         <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Constants" style="plain" id="PyU-Hq-fSA">
+                                    <barButtonItem title="Constants" id="PyU-Hq-fSA">
                                         <connections>
                                             <segue destination="ORr-Hx-nNL" kind="show" id="KEL-E3-5ax"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="History" style="plain" id="TbM-0h-NGi">
+                                    <barButtonItem title="History" id="TbM-0h-NGi">
                                         <connections>
                                             <segue destination="3k5-r3-nPQ" kind="show" id="sSN-uQ-jrW"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" style="plain" id="6gb-Ck-Mbt"/>
+                                    <barButtonItem title="Save" id="6gb-Ck-Mbt"/>
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
@@ -548,7 +535,7 @@
         <image name="whitespace" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kfg-E4-gMI"/>
-        <segue reference="iek-kS-jRE"/>
+        <segue reference="KEL-E3-5ax"/>
+        <segue reference="sSN-uQ-jrW"/>
     </inferredMetricsTieBreakers>
 </document>

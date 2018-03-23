@@ -23,6 +23,14 @@ class HistoryController: UIViewController {
             self.performSegue(withIdentifier: "segueHistoryBackToWeightController", sender: nil)
         case "temperature":
             self.performSegue(withIdentifier: "segueHistoryBackToTemperatureController", sender: nil)
+        case "distance":
+            self.performSegue(withIdentifier: "segueHistoryBackToDistanceController", sender: nil)
+        case "liquids":
+            self.performSegue(withIdentifier: "segueHistroyBackToLiquidsController", sender: nil)
+        case "volume":
+            self.performSegue(withIdentifier: "segueHistoryBackToVolumeController", sender: nil)
+        case "speed":
+            self.performSegue(withIdentifier: "segueHistoryBackToSpeedController", sender: nil)
         default:
             break
         }

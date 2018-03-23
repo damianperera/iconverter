@@ -628,8 +628,8 @@
         <image name="whitespace" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ecf-Cb-7AY"/>
-        <segue reference="O5y-mY-7Rr"/>
+        <segue reference="zGA-8w-75Z"/>
+        <segue reference="Q16-vw-yx6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
 </document>

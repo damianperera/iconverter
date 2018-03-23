@@ -107,11 +107,13 @@ class TemperatureController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         txtCelcius.becomeFirstResponder()
+        setNegativeFor = txtCelcius
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if didSegue {
             txtCelcius.becomeFirstResponder()
+            setNegativeFor = txtCelcius
             didSegue = false
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)),

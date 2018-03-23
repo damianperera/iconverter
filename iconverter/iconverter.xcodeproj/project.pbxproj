@@ -90,10 +90,10 @@
 			children = (
 				B3754B52204BD9F6002F0CB4 /* WeightController.swift */,
 				B3754B54204BD9F6002F0CB4 /* TemperatureController.swift */,
+				B38A557E20651B9000CCB223 /* DistanceController.swift */,
 				B3676D902062D8C30079616D /* TabBarController.swift */,
 				B3C467C52064C2A70029CEBF /* HistoryController.swift */,
 				B3C467C72064C2BF0029CEBF /* ConstantsController.swift */,
-				B38A557E20651B9000CCB223 /* DistanceController.swift */,
 				B38A558020651BA000CCB223 /* LiquidsController.swift */,
 				B38A558220651BB000CCB223 /* VolumeController.swift */,
 				B38A558420651BC400CCB223 /* SpeedController.swift */,

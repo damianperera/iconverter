@@ -229,7 +229,7 @@
         <!--Distance-->
         <scene sceneID="hbo-XO-sxC">
             <objects>
-                <viewController id="wYU-71-tQY" sceneMemberID="viewController">
+                <viewController id="wYU-71-tQY" customClass="DistanceController" customModule="iconverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u0R-5d-ONw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,26 +239,38 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtCentimetreOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="vhZ-R5-XZP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tia-UU-ZOz">
                                 <rect key="frame" x="16" y="140" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtMetreOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="BTD-Pc-zcI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbP-Gi-wg9">
                                 <rect key="frame" x="16" y="178" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtInchOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="09j-0D-4pS"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Mk-w6-ASJ">
                                 <rect key="frame" x="16" y="216" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtMillimetreOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="cOv-0H-1fP"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centimeter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-qC-rCx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centimetre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcw-qC-rCx">
                                 <rect key="frame" x="16" y="107" width="184" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dl1-uk-kor"/>
@@ -285,7 +297,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Millimeter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKr-d6-FeT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Millimetre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKr-d6-FeT">
                                 <rect key="frame" x="16" y="221" width="184" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gqE-no-RS2"/>
@@ -299,6 +311,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtYardOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="cRH-ml-BMB"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-LR-owf">
                                 <rect key="frame" x="16" y="259" width="184" height="21"/>
@@ -375,6 +390,13 @@
                         <viewLayoutGuide key="safeArea" id="1EF-Ff-LM3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" image="distance" id="XTC-Db-5Pr"/>
+                    <connections>
+                        <outlet property="txtCentimetre" destination="qep-C4-Oen" id="7K8-VY-Q2M"/>
+                        <outlet property="txtInch" destination="DbP-Gi-wg9" id="nfn-Xq-6Tv"/>
+                        <outlet property="txtMetre" destination="tia-UU-ZOz" id="Tun-tY-eny"/>
+                        <outlet property="txtMillimetre" destination="3Mk-w6-ASJ" id="sXJ-Ix-F7m"/>
+                        <outlet property="txtYard" destination="Yar-ub-0vV" id="xkf-eL-CaX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8p-Hi-QQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -742,8 +764,8 @@
         <image name="whitespace" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ecf-Cb-7AY"/>
-        <segue reference="O5y-mY-7Rr"/>
+        <segue reference="zGA-8w-75Z"/>
+        <segue reference="Q16-vw-yx6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
 </document>

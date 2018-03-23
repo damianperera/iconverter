@@ -20,5 +20,14 @@ class TemperatureController: UIViewController, UITabBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! HistoryController
+        destination.segueFromConroller = "temperature"
+    }
+    
+    @IBAction func backToTemperatureController(storyboard: UIStoryboardSegue){
+        
+    }
+    
 }
 

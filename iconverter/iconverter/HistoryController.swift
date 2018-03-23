@@ -11,8 +11,21 @@ import UIKit
 
 class HistoryController: UIViewController {
     
+    var segueFromConroller:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func cancelSegue(_ sender: UIBarButtonItem) {
+        switch segueFromConroller {
+        case "weight":
+            self.performSegue(withIdentifier: "segueBackToWeightController", sender: nil)
+        case "temperature":
+            self.performSegue(withIdentifier: "segueBackToTemperatureController", sender: nil)
+        default:
+            break
+        }
+    }
+
 }

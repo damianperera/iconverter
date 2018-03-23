@@ -103,6 +103,15 @@ class WeightController: UIViewController, UITextFieldDelegate {
         convert(from: .st, source: sender)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! HistoryController
+        destination.segueFromConroller = "weight"
+    }
+
+    @IBAction func backToWeightController(storyboard: UIStoryboardSegue){
+
+    }
+    
     /**
         UI Components
      **/

@@ -178,7 +178,7 @@ class WeightController: UIViewController, UITextFieldDelegate {
             numberOfDecimalDigits = 0
         }
         
-        return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 4
+        return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 4 && newText.characters.count <= 9
     }
 
     override func didReceiveMemoryWarning() {

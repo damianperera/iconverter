@@ -312,7 +312,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                 <connections>
-                                    <action selector="txtYardOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="cRH-ml-BMB"/>
+                                    <action selector="txtYardOnEdit:" destination="wYU-71-tQY" eventType="editingChanged" id="SQC-5Q-oZg"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-LR-owf">
@@ -395,7 +395,7 @@
                         <outlet property="txtInch" destination="DbP-Gi-wg9" id="nfn-Xq-6Tv"/>
                         <outlet property="txtMetre" destination="tia-UU-ZOz" id="Tun-tY-eny"/>
                         <outlet property="txtMillimetre" destination="3Mk-w6-ASJ" id="sXJ-Ix-F7m"/>
-                        <outlet property="txtYard" destination="Yar-ub-0vV" id="xkf-eL-CaX"/>
+                        <outlet property="txtYard" destination="dTo-li-jD0" id="ufW-Lu-1s8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8p-Hi-QQI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -117,4 +117,69 @@ class DistanceController: UIViewController, UITextFieldDelegate {
         UI Components
     **/
     
+    override func viewDidAppear(_ animated: Bool) {
+        txtCentimetre.becomeFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if didSegue {
+            txtCentimetre.becomeFirstResponder()
+            didSegue = false
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)),
+                                               name: .UIKeyboardWillShow, object: nil)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    @objc func keyboardWillAppear(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as?
+            NSValue)?.cgRectValue {
+            self.keyBoardHeight = keyboardSize.origin.y - keyboardSize.height -
+                (self.tabBarController?.tabBar.frame.height)!
+        }
+        var tabBarFrame: CGRect = (self.tabBarController?.tabBar.frame)!
+        tabBarFrame.origin.y = self.keyBoardHeight
+        isKeyboardActive = true
+        UIView.animate(withDuration: 0, animations: {() -> Void in
+            self.tabBarController?.tabBar.frame = tabBarFrame
+        })
+    }
+    
+    @objc func keyboardWillDissapear() {
+        var tabBarFrame: CGRect = CGRect(x: self.view.frame.minX, y: self.view.frame.maxY, width:
+            self.view.frame.width, height: 30.0)
+        tabBarFrame.origin.y = self.view.frame.maxY
+        self.tabBarController?.tabBar.frame = tabBarFrame
+        isKeyboardActive = false
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let oldText = textField.text, let r = Range(range, in: oldText) else {
+            return true
+        }
+        
+        let newText = oldText.replacingCharacters(in: r, with: string)
+        let isNumeric = newText.isEmpty || (Double(newText) != nil)
+        let numberOfDots = newText.components(separatedBy: ".").count - 1
+        
+        let numberOfDecimalDigits: Int
+        if let dotIndex = newText.index(of: ".") {
+            numberOfDecimalDigits = newText.distance(from: dotIndex, to: newText.endIndex) - 1
+        } else {
+            numberOfDecimalDigits = 0
+        }
+        
+        return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 4 && newText.count <= 9
+    }
+    
+    override var disablesAutomaticKeyboardDismissal: Bool { return true }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 }

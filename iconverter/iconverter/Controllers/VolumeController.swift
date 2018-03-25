@@ -58,7 +58,7 @@ class VolumeController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func backToLiquidsController(storyboard: UIStoryboardSegue){
+    @IBAction func backToVolumeController(storyboard: UIStoryboardSegue){
         
     }
     
@@ -99,12 +99,12 @@ class VolumeController: UIViewController, UITextFieldDelegate {
      **/
     
     override func viewDidAppear(_ animated: Bool) {
-        txtCubicCentimetres.becomeFirstResponder()
+        txtCubicMetres.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if didSegue {
-            txtCubicCentimetres.becomeFirstResponder()
+            txtCubicMetres.becomeFirstResponder()
             didSegue = false
         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(notification:)),

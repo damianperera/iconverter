@@ -563,6 +563,7 @@
                     <connections>
                         <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueHistoryBackToWeightController" unwindAction="backToWeightControllerWithStoryboard:" id="U0c-Nq-DoV"/>
                         <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueHistoryBackToTemperatureController" unwindAction="backToTemperatureControllerWithStoryboard:" id="K6z-iU-JBX"/>
+                        <segue destination="dTa-9T-n9N" kind="unwind" identifier="segueHistoryBackToDistanceController" unwindAction="backToDistanceControllerWithStoryboard:" id="yvW-9y-dk2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prq-Fx-vCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -602,6 +603,7 @@
                     <connections>
                         <segue destination="HUg-Qy-9UC" kind="unwind" identifier="segueConstantsBackToTemperatureController" unwindAction="backToTemperatureControllerWithStoryboard:" id="pFm-h1-mBU"/>
                         <segue destination="HUg-Qy-9UC" kind="unwind" identifier="segueConstantsBackToWeightController" unwindAction="backToWeightControllerWithStoryboard:" id="zwj-Rh-q4a"/>
+                        <segue destination="HUg-Qy-9UC" kind="unwind" identifier="segueConstantsBackToDistanceController" unwindAction="backToDistanceControllerWithStoryboard:" id="GO5-5p-H7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZ8-4P-Hvf" userLabel="First Responder" sceneMemberID="firstResponder"/>

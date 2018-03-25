@@ -639,7 +639,7 @@
         <!--Liquids-->
         <scene sceneID="MUT-qW-Zrf">
             <objects>
-                <viewController id="psF-Rh-fnb" sceneMemberID="viewController">
+                <viewController id="psF-Rh-fnb" customClass="LiquidsController" customModule="iconverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mr-jO-k3f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -670,6 +670,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtGallonOnEdit:" destination="psF-Rh-fnb" eventType="editingChanged" id="bVc-yz-sWW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-RD-u1w">
                                 <rect key="frame" x="16" y="107" width="190" height="21"/>
@@ -685,6 +688,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtLitreOnEdit:" destination="psF-Rh-fnb" eventType="editingChanged" id="jKv-c9-bE8"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Litre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tf-ed-Ui3">
                                 <rect key="frame" x="16" y="145" width="190" height="21"/>
@@ -700,6 +706,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtPintOnEdit:" destination="psF-Rh-fnb" eventType="editingChanged" id="78I-3z-jmA"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcl-KT-nK1">
                                 <rect key="frame" x="16" y="183" width="190" height="21"/>
@@ -715,6 +724,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                <connections>
+                                    <action selector="txtFluidOunceOnEdit:" destination="psF-Rh-fnb" eventType="editingChanged" id="Xzm-kg-5UB"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluid Ounce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-BQ-xTX">
                                 <rect key="frame" x="16" y="221" width="190" height="21"/>
@@ -763,6 +775,12 @@
                         <viewLayoutGuide key="safeArea" id="EjS-Oc-Eri"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Liquids" image="liquids" id="ArU-ie-Ce6"/>
+                    <connections>
+                        <outlet property="txtFluidOunce" destination="VwV-Gb-JhH" id="M2l-u6-keG"/>
+                        <outlet property="txtGallon" destination="5mS-wg-8ln" id="lOJ-o8-JVo"/>
+                        <outlet property="txtLitre" destination="3rz-VR-WjS" id="sCZ-i2-WwP"/>
+                        <outlet property="txtPint" destination="vfk-hr-YRf" id="gNk-yy-6GL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVo-2o-pJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

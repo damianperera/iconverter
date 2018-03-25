@@ -6,4 +6,20 @@
 //  Copyright © 2018 Damian Perera. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class LiquidsController: UIViewController, UITextFieldDelegate {
+    
+    var keyBoardHeight:CGFloat = 0
+    var isKeyboardActive = false
+    var tabBarOGHeight:CGFloat = 0
+    var didSegue = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}

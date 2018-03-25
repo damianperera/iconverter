@@ -11,25 +11,51 @@ import UIKit
 
 class HistoryController: UIViewController {
     
+    @IBOutlet weak var lblFirst: UILabel!
+    @IBOutlet weak var lblSecond: UILabel!
+    @IBOutlet weak var lblThird: UILabel!
+    @IBOutlet weak var lblFourth: UILabel!
+    @IBOutlet weak var lblFifth: UILabel!
+    
     var segueFromController:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadHistory()
+    }
+    
+    func loadHistory() {
         switch segueFromController {
         case "weight":
-            print(HistoryModel().getHistory(unit: "weight"))
+            populateViews(arr: HistoryModel().getHistory(unit: "weight")!)
         case "temperature":
-            print(HistoryModel().getHistory(unit: "temperature"))
+            populateViews(arr: HistoryModel().getHistory(unit: "temperature")!)
         case "distance":
-            print(HistoryModel().getHistory(unit: "distance"))
+            populateViews(arr: HistoryModel().getHistory(unit: "distance")!)
         case "liquids":
-            print(HistoryModel().getHistory(unit: "liquids"))
+            populateViews(arr: HistoryModel().getHistory(unit: "liquids")!)
         case "volume":
-            print(HistoryModel().getHistory(unit: "volume"))
+            populateViews(arr: HistoryModel().getHistory(unit: "volume")!)
         case "speed":
-            print(HistoryModel().getHistory(unit: "speed"))
+            populateViews(arr: HistoryModel().getHistory(unit: "speed")!)
         default:
             break
+        }
+    }
+    
+    func populateViews(arr: Array<Dictionary<Unit, String>>) {
+        print("Populating for ", arr.count, " results")
+        var count:Int = 1
+        for data in arr {
+            if let label:UILabel = self.view.viewWithTag(count) as? UILabel {
+                label.text = ""
+                for (key, val) in data {
+                    label.text = label.text?.appending(" " + val + " " + ConverterModel().getName(unit: key) + " =" )
+                }
+                let modifiedLabel = label.text!
+                label.text = String(describing: modifiedLabel.dropLast())
+            }
+            count += 1
         }
     }
     

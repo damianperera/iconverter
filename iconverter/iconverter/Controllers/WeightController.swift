@@ -102,9 +102,7 @@ class WeightController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        print("Saving Array: ", toSave)
         HistoryModel().save(key: "weight", dict: toSave)
-//        print(HistoryModel().getData(key: "Weight"))
     }
     
     

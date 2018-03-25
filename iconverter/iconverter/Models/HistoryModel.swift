@@ -15,7 +15,7 @@ class HistoryModel {
         var writableArray:Array<Dictionary<String, String>> = Array()
         if isAvailable(key: key) {
             writableArray = getStoredData(key: key)
-            if (writableArray.count == 4) {
+            if (writableArray.count == 5) {
                 writableArray.removeFirst()
                 writableArray.append(storableDictionary)
             } else {

@@ -62,6 +62,25 @@ class TemperatureController: UIViewController, UITextFieldDelegate {
         Action Components
      **/
     
+    @IBAction func btnSaveOnSelect(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.C] = textField.text
+                case 1:
+                    toSave[.F] = textField.text
+                case 2:
+                    toSave[.K] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        HistoryModel().save(key: "temperature", dict: toSave)
+    }
+    
     @IBAction func btnNegativeOnSelect(_ sender: UIBarButtonItem) {
         setNegativeFor.text = "-"
     }

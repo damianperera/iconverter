@@ -132,21 +132,21 @@ class ConverterModel {
             values[.ih] = val * 36
             values[.mm] = val * 914.4
         case .gal:
-            values[.l] = val * 3.78541
+            values[.l] = val * 4.54609
             values[.pt] = val * 8
-            values[.fl_oz] = val * 128
+            values[.fl_oz] = val * 160
         case .l:
-            values[.gal] = val * 0.264172
-            values[.pt] = val * 2.11338
-            values[.fl_oz] = val * 33.814
+            values[.gal] = val * 0.219969
+            values[.pt] = val * 1.75975
+            values[.fl_oz] = val * 35.1951
         case .pt:
             values[.gal] = val * 0.125
-            values[.l] = val * 0.473176
-            values[.fl_oz] = val * 16
+            values[.l] = val * 0.568261
+            values[.fl_oz] = val * 20
         case .fl_oz:
-            values[.gal] = val * 0.0078125
-            values[.l] = val * 0.0295735
-            values[.pt] = val * 0.0625
+            values[.gal] = val * 0.00625
+            values[.l] = val * 0.0284131
+            values[.pt] = val * 0.05
         case .m3:
             values[.cm3] = val * 1000000
             values[.l3] = val * 1000

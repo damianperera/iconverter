@@ -11,21 +11,32 @@ import UIKit
 class HistoryModel {
     
     func save(key: String, dict: Dictionary<Unit, String>) {
-        let storableDictionary:Dictionary<String, String> = getStorableDictionary(dict: dict)
-        var writableArray:Array<Dictionary<String, String>> = Array()
-        if isAvailable(key: key) {
-            writableArray = getStoredData(key: key)
-            if (writableArray.count == 5) {
-                writableArray.removeFirst()
-                writableArray.append(storableDictionary)
+        if isDictValid(dict: dict) {
+            let storableDictionary:Dictionary<String, String> = getStorableDictionary(dict: dict)
+            var writableArray:Array<Dictionary<String, String>> = Array()
+            if isAvailable(key: key) {
+                writableArray = getStoredData(key: key)
+                if (writableArray.count == 5) {
+                    writableArray.removeFirst()
+                    writableArray.append(storableDictionary)
+                } else {
+                    writableArray.append(storableDictionary)
+                }
+                saveArray(arr: writableArray, key: key)
             } else {
                 writableArray.append(storableDictionary)
+                saveArray(arr: writableArray, key: key)
             }
-            saveArray(arr: writableArray, key: key)
-        } else {
-            writableArray.append(storableDictionary)
-            saveArray(arr: writableArray, key: key)
         }
+    }
+    
+    func isDictValid(dict: Dictionary<Unit, String>) -> Bool {
+        for (_, val) in dict {
+            if val == "" {
+                return false
+            }
+        }
+        return true
     }
     
     func getHistory(unit: String) -> Array<Dictionary<Unit, String>>? {

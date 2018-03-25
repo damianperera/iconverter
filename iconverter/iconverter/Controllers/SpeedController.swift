@@ -30,6 +30,25 @@ class SpeedController: UIViewController, UITextFieldDelegate {
         Action Components
     **/
     
+    @IBAction func btnSaveOnClick(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.m_s] = textField.text
+                case 1:
+                    toSave[.km_h] = textField.text
+                case 2:
+                    toSave[.ml_h] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        HistoryModel().save(key: "speed", dict: toSave)
+    }
+    
     @IBAction func txtMetresOnEdit(_ sender: UITextField) {
         convert(from: .m_s, source: sender)
     }

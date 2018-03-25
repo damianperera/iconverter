@@ -32,6 +32,27 @@ class LiquidsController: UIViewController, UITextFieldDelegate {
         Action Components
      **/
     
+    @IBAction func btnSaveOnSelect(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.gal] = textField.text
+                case 1:
+                    toSave[.l] = textField.text
+                case 2:
+                    toSave[.pt] = textField.text
+                case 3:
+                    toSave[.fl_oz] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        HistoryModel().save(key: "liquids", dict: toSave)
+    }
+    
     @IBAction func txtGallonOnEdit(_ sender: UITextField) {
         convert(from: .gal, source: sender)
     }

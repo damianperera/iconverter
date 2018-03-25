@@ -30,6 +30,25 @@ class VolumeController: UIViewController, UITextFieldDelegate {
         Action Components
      **/
     
+    @IBAction func btnSaveOnClick(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.m3] = textField.text
+                case 1:
+                    toSave[.cm3] = textField.text
+                case 2:
+                    toSave[.l3] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        HistoryModel().save(key: "volume", dict: toSave)
+    }
+    
     @IBAction func txtCubicMetresOnEdit(_ sender: UITextField) {
         convert(from: .m3, source: sender)
     }

@@ -73,6 +73,30 @@ class DistanceController: UIViewController, UITextFieldDelegate {
         Action Components
     **/
     
+    @IBAction func btnSaveOnSelect(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.cm] = textField.text
+                case 1:
+                    toSave[.m] = textField.text
+                case 2:
+                    toSave[.ih] = textField.text
+                case 3:
+                    toSave[.mm] = textField.text
+                case 4:
+                    toSave[.yd] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        HistoryModel().save(key: "distance", dict: toSave)
+    }
+    
+    
     @IBAction func txtCentimetreOnEdit(_ sender: UITextField) {
         convert(from: .cm, source: sender)
     }

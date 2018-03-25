@@ -72,7 +72,6 @@ class HistoryController: UIViewController {
     }
     
     func populateViews(arr: Array<Dictionary<Unit, String>>) {
-        print("Populating for ", arr.count, " results")
         var count:Int = 1
         for data in arr {
             if let label:UILabel = self.view.viewWithTag(count) as? UILabel {

@@ -152,7 +152,11 @@
                                             <segue destination="3k5-r3-nPQ" kind="show" id="iek-kS-jRE"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" id="qhK-kA-ChP"/>
+                                    <barButtonItem title="Save" id="qhK-kA-ChP">
+                                        <connections>
+                                            <action selector="btnSaveOnClick:" destination="9pv-A4-QxB" id="Oxz-i3-eTB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -1116,8 +1120,8 @@
         <image name="whitespace" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KEL-E3-5ax"/>
-        <segue reference="sSN-uQ-jrW"/>
+        <segue reference="kfg-E4-gMI"/>
+        <segue reference="iek-kS-jRE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
 </document>

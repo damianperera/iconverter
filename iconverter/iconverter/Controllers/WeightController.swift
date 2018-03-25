@@ -80,6 +80,34 @@ class WeightController: UIViewController, UITextFieldDelegate {
         Action Listerners
     **/
     
+    @IBAction func btnSaveOnClick(_ sender: UIBarButtonItem) {
+        var toSave:Dictionary<Unit, String> = Dictionary()
+        for subview in view.subviews as [UIView] {
+            if let textField = subview as? UITextField {
+                switch textField.tag {
+                case 0:
+                    toSave[.kg] = textField.text
+                case 1:
+                    toSave[.g] = textField.text
+                case 2:
+                    toSave[.oz] = textField.text
+                case 3:
+                    toSave[.lbs] = textField.text
+                case 4:
+                    toSave[.st] = textField.text
+                case 5:
+                    toSave[.st_lbs] = textField.text
+                default:
+                    break
+                }
+            }
+        }
+        print("Saving Array: ", toSave)
+        HistoryModel().save(key: "weight", dict: toSave)
+//        print(HistoryModel().getData(key: "Weight"))
+    }
+    
+    
     @IBAction func txtKilogramsOnEdit(_ sender: UITextField) {
         convert(from: .kg, source: sender)
     }

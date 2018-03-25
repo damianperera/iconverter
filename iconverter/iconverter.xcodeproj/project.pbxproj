@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31C5F682067DDC300400F42 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C5F672067DDC300400F42 /* HistoryModel.swift */; };
 		B3676D912062D8C30079616D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3676D902062D8C30079616D /* TabBarController.swift */; };
 		B3754B51204BD9F6002F0CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3754B50204BD9F6002F0CB4 /* AppDelegate.swift */; };
 		B3754B53204BD9F6002F0CB4 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3754B52204BD9F6002F0CB4 /* WeightController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B31C5F672067DDC300400F42 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		B3676D902062D8C30079616D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B3754B4D204BD9F6002F0CB4 /* iconverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iconverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3754B50204BD9F6002F0CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				B3F44BFF205FB87200D41E07 /* ConverterModel.swift */,
 				B37902E420638F4300129793 /* ExtensionsModel.swift */,
+				B31C5F672067DDC300400F42 /* HistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				B3C467C62064C2A70029CEBF /* HistoryController.swift in Sources */,
 				B3676D912062D8C30079616D /* TabBarController.swift in Sources */,
 				B38A558520651BC400CCB223 /* SpeedController.swift in Sources */,
+				B31C5F682067DDC300400F42 /* HistoryModel.swift in Sources */,
 				B3C467C82064C2BF0029CEBF /* ConstantsController.swift in Sources */,
 				B3754B53204BD9F6002F0CB4 /* WeightController.swift in Sources */,
 				B38A558120651BA000CCB223 /* LiquidsController.swift in Sources */,

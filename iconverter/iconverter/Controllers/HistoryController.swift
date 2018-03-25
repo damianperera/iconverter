@@ -15,6 +15,22 @@ class HistoryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switch segueFromController {
+        case "weight":
+            print(HistoryModel().getHistory(unit: "weight"))
+        case "temperature":
+            print(HistoryModel().getHistory(unit: "temperature"))
+        case "distance":
+            print(HistoryModel().getHistory(unit: "distance"))
+        case "liquids":
+            print(HistoryModel().getHistory(unit: "liquids"))
+        case "volume":
+            print(HistoryModel().getHistory(unit: "volume"))
+        case "speed":
+            print(HistoryModel().getHistory(unit: "speed"))
+        default:
+            break
+        }
     }
     
     @IBAction func cancelSegue(_ sender: UIBarButtonItem) {

@@ -916,14 +916,13 @@
         <!--Speed-->
         <scene sceneID="Unz-3Z-QDz">
             <objects>
-                <viewController id="N0w-NJ-hOE" sceneMemberID="viewController">
+                <viewController id="N0w-NJ-hOE" customClass="SpeedController" customModule="iconverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L1S-9o-xTu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qca-KM-GNG">
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qca-KM-GNG">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem image="convert" style="plain" id="d0D-BS-rgL">
                                         <color key="tintColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -942,8 +941,74 @@
                                 </items>
                                 <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ulm-Hg-tD9">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metres /sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQf-wa-20e">
+                                <rect key="frame" x="16" y="107" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1zI-xc-1qz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7sJ-Fx-sIp">
+                                <rect key="frame" x="16" y="140" width="343" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Kilometres /hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2q-2a-KTW">
+                                <rect key="frame" x="16" y="145" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h52-tu-k5t">
+                                <rect key="frame" x="16" y="178" width="343" height="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Miles /hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCk-Fx-js9">
+                                <rect key="frame" x="16" y="183" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7sJ-Fx-sIp" firstAttribute="top" secondItem="XQf-wa-20e" secondAttribute="bottom" constant="12" id="0AJ-Jg-jhs"/>
+                            <constraint firstItem="Q2q-2a-KTW" firstAttribute="centerY" secondItem="7sJ-Fx-sIp" secondAttribute="centerY" id="0zz-T0-Vp2"/>
+                            <constraint firstItem="qca-KM-GNG" firstAttribute="leading" secondItem="L1S-9o-xTu" secondAttribute="leading" id="2bu-Zi-gFf"/>
+                            <constraint firstItem="h52-tu-k5t" firstAttribute="leading" secondItem="oCk-Fx-js9" secondAttribute="leading" id="38a-tf-Lp8"/>
+                            <constraint firstItem="XQf-wa-20e" firstAttribute="trailing" secondItem="oCk-Fx-js9" secondAttribute="trailing" id="3Z0-Nb-krs"/>
+                            <constraint firstItem="Ulm-Hg-tD9" firstAttribute="leading" secondItem="L1S-9o-xTu" secondAttribute="leadingMargin" id="4gH-je-ezC"/>
+                            <constraint firstItem="Ulm-Hg-tD9" firstAttribute="leading" secondItem="XQf-wa-20e" secondAttribute="leading" id="5HS-hD-2Fz"/>
+                            <constraint firstItem="7sJ-Fx-sIp" firstAttribute="leading" secondItem="Q2q-2a-KTW" secondAttribute="leading" id="6fn-kE-VMq"/>
+                            <constraint firstItem="Ulm-Hg-tD9" firstAttribute="top" secondItem="qca-KM-GNG" secondAttribute="bottom" constant="14" id="ACp-LK-ylb"/>
+                            <constraint firstItem="Ulm-Hg-tD9" firstAttribute="trailing" secondItem="7sJ-Fx-sIp" secondAttribute="trailing" id="C58-NV-wY8"/>
+                            <constraint firstItem="7sJ-Fx-sIp" firstAttribute="top" secondItem="Ulm-Hg-tD9" secondAttribute="bottom" constant="8" symbolic="YES" id="DYo-CE-xXb"/>
+                            <constraint firstItem="7sJ-Fx-sIp" firstAttribute="trailing" secondItem="h52-tu-k5t" secondAttribute="trailing" id="OG0-DA-8Tf"/>
+                            <constraint firstItem="XQf-wa-20e" firstAttribute="centerX" secondItem="Q2q-2a-KTW" secondAttribute="centerX" id="Oyf-gI-eM9"/>
+                            <constraint firstItem="Q2q-2a-KTW" firstAttribute="leading" secondItem="oCk-Fx-js9" secondAttribute="leading" id="Q4p-vr-aCV"/>
+                            <constraint firstItem="oCk-Fx-js9" firstAttribute="centerY" secondItem="h52-tu-k5t" secondAttribute="centerY" id="Ql3-aV-hYQ"/>
+                            <constraint firstItem="7sJ-Fx-sIp" firstAttribute="baseline" secondItem="Q2q-2a-KTW" secondAttribute="baseline" id="UHR-px-MOp"/>
+                            <constraint firstItem="h52-tu-k5t" firstAttribute="baseline" secondItem="oCk-Fx-js9" secondAttribute="baseline" id="UQo-7H-les"/>
+                            <constraint firstItem="qca-KM-GNG" firstAttribute="centerX" secondItem="Ulm-Hg-tD9" secondAttribute="centerX" id="V9k-xK-KdT"/>
+                            <constraint firstItem="qca-KM-GNG" firstAttribute="top" secondItem="fNc-x7-xKN" secondAttribute="top" id="ePg-fX-9My"/>
+                            <constraint firstItem="h52-tu-k5t" firstAttribute="top" secondItem="Q2q-2a-KTW" secondAttribute="bottom" constant="12" id="gZX-Ht-37x"/>
+                            <constraint firstItem="XQf-wa-20e" firstAttribute="leading" secondItem="Q2q-2a-KTW" secondAttribute="leading" id="icz-UA-X48"/>
+                            <constraint firstItem="oCk-Fx-js9" firstAttribute="top" secondItem="7sJ-Fx-sIp" secondAttribute="bottom" constant="13" id="pSJ-UG-Mds"/>
+                            <constraint firstItem="h52-tu-k5t" firstAttribute="top" secondItem="7sJ-Fx-sIp" secondAttribute="bottom" constant="8" symbolic="YES" id="yWE-4Y-g1g"/>
+                            <constraint firstAttribute="trailing" secondItem="qca-KM-GNG" secondAttribute="trailing" id="yz2-87-Zv8"/>
+                            <constraint firstItem="XQf-wa-20e" firstAttribute="centerY" secondItem="Ulm-Hg-tD9" secondAttribute="centerY" id="z7g-PC-qeb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fNc-x7-xKN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Speed" image="speed" id="dpq-5j-x3p"/>
@@ -964,8 +1029,8 @@
         <image name="whitespace" width="1" height="1"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="glL-Kl-2ov"/>
-        <segue reference="MNr-hP-0WT"/>
+        <segue reference="KEL-E3-5ax"/>
+        <segue reference="sSN-uQ-jrW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
 </document>

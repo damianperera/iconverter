@@ -6,4 +6,16 @@
 //  Copyright © 2018 Damian Perera. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SpeedController: UIViewController, UITextFieldDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}

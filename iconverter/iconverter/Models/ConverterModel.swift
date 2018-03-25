@@ -19,7 +19,7 @@ class ConverterModel {
         .g: "grams",
         .oz: "ounces",
         .lbs: "pounds",
-        .st: "stone",
+        .st: "stones",
         .st_lbs: "stone pounds",
         .C: "Celcius",
         .F: "Fahrenheit",

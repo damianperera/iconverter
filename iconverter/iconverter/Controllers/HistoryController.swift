@@ -27,20 +27,48 @@ class HistoryController: UIViewController {
     func loadHistory() {
         switch segueFromController {
         case "weight":
-            populateViews(arr: HistoryModel().getHistory(unit: "weight")!)
+            if let arr = HistoryModel().getHistory(unit: "weight") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         case "temperature":
-            populateViews(arr: HistoryModel().getHistory(unit: "temperature")!)
+            if let arr = HistoryModel().getHistory(unit: "temperature") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         case "distance":
-            populateViews(arr: HistoryModel().getHistory(unit: "distance")!)
+            if let arr = HistoryModel().getHistory(unit: "distance") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         case "liquids":
-            populateViews(arr: HistoryModel().getHistory(unit: "liquids")!)
+            if let arr = HistoryModel().getHistory(unit: "liquids") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         case "volume":
-            populateViews(arr: HistoryModel().getHistory(unit: "volume")!)
+            if let arr = HistoryModel().getHistory(unit: "volume") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         case "speed":
-            populateViews(arr: HistoryModel().getHistory(unit: "speed")!)
+            if let arr = HistoryModel().getHistory(unit: "speed") {
+                populateViews(arr: arr)
+            } else {
+                setNoHistoryText()
+            }
         default:
             break
         }
+    }
+    
+    func setNoHistoryText() {
+        lblThird.text = "No History Saved"
     }
     
     func populateViews(arr: Array<Dictionary<Unit, String>>) {

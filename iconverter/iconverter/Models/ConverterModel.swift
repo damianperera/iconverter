@@ -66,37 +66,37 @@ class ConverterModel {
             values[.oz] = val * 35.274
             values[.lbs] = val * 2.20462
             values[.st] = val * 0.157473
-            values[.st_lbs] = val
+            values[.st_lbs] = (values[.st]?.truncatingRemainder(dividingBy: 1))! * 14
         case .g:
             values[.kg] = val * 0.001
             values[.oz] = val * 0.035274
             values[.lbs] = val * 0.00220462
             values[.st] = val * 0.000157473
-            values[.st_lbs] = val
+            values[.st_lbs] = (values[.st]?.truncatingRemainder(dividingBy: 1))! * 14
         case .oz:
             values[.kg] = val * 0.0283495
             values[.g] = val * 28.3495
             values[.lbs] = val * 0.0625
             values[.st] = val * 0.00446429
-            values[.st_lbs] = val
+            values[.st_lbs] = (values[.st]?.truncatingRemainder(dividingBy: 1))! * 14
         case .lbs:
             values[.kg] = val * 0.453592
             values[.g] = val * 453.592
             values[.oz] = val * 16
             values[.st] = val * 0.0714286
-            values[.st_lbs] = val
+            values[.st_lbs] = (values[.st]?.truncatingRemainder(dividingBy: 1))! * 14
         case .st:
             values[.kg] = val * 6.35029
             values[.g] = val * 6350.29
             values[.oz] = val * 224
             values[.lbs] = val * 14
-            values[.st_lbs] = val
+            values[.st_lbs] = (values[.st]?.truncatingRemainder(dividingBy: 1))! * 14
         case .st_lbs:
-            values[.kg] = val
-            values[.g] = val
-            values[.oz] = val
+            values[.kg] = val * 0.453592
+            values[.g] = val * 453.592
+            values[.oz] = val * 16
             values[.lbs] = val
-            values[.st] = val
+            values[.st] = val * 0.0714286
         case .C:
             values[.F] = val * 1.8 + 32
             values[.K] = val + 273.15

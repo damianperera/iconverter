@@ -36,4 +36,12 @@ class ConstantsController: UIViewController {
         }
     }
     
+    /**
+        UI Components
+    **/
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }

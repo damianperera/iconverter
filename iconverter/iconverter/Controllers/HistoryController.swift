@@ -35,5 +35,13 @@ class HistoryController: UIViewController {
             break
         }
     }
+    
+    /**
+     UI Components
+     **/
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
 }

@@ -29,7 +29,7 @@ class LiquidsController: UIViewController, UITextFieldDelegate {
     }
     
     /**
-     Action Components
+        Action Components
      **/
     
     @IBAction func txtGallonOnEdit(_ sender: UITextField) {
@@ -69,7 +69,7 @@ class LiquidsController: UIViewController, UITextFieldDelegate {
     }
     
     /**
-     Logical Components
+        Logical Components
      **/
     
     func convert(from: Unit, source: UITextField) {
@@ -105,7 +105,7 @@ class LiquidsController: UIViewController, UITextFieldDelegate {
     }
     
     /**
-     UI Components
+        UI Components
      **/
     
     override func viewDidAppear(_ animated: Bool) {

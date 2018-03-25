@@ -54,10 +54,10 @@ class LiquidsController: UIViewController, UITextFieldDelegate {
             switch target {
             case "History":
                 let destination = segue.destination as! HistoryController
-                destination.segueFromController = "distance"
+                destination.segueFromController = "liquids"
             case "Constants":
                 let destination = segue.destination as! ConstantsController
-                destination.segueFromController = "distance"
+                destination.segueFromController = "liquids"
             default:
                 break
             }
